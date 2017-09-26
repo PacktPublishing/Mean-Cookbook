@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand" href="#">MEAN Stack Blog</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/posts" routerLinkActive="active" i18n="A collection of blog posts|Primary link to list of blog posts">Posts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/authors" routerLinkActive="active" i18n="People who write blog posts|Primary link to list of blog authors">
+        {authorCount, plural, =1 {Author} other {Authors}}
+      </a>
+    </li>
+  </ul>
+  <div class="navbar-nav">
+    <span *ngIf="(currentUser$ | async).isAuthenticated(); else unauthenticated">
+      <span class="nav-link">{{(currentUser$ | async).getName()}} | <a href="#" (click)="logout()">logout</a></span>
+    </span>
+    <template #unauthenticated>
+      <a routerLink="/login" routerLinkActive="active" class="nav-link pull-right">Login</a>
+    </template>
+  </div>
+</nav>
+
+<main class="container main-content">
+  <router-outlet></router-outlet>
+</main>

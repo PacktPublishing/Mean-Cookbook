@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-3">
+    <ngb-accordion activeIds="ngb-panel-0">
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <fa [name]="'user'" [size]=1></fa>
+          <strong>Matt DeLucas</strong>
+          <small>(3)</small>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <ul class="list-unstyled">
+            <li>
+              <a routerLink="/posts/1">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 1
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/2">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 2
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/3">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 3
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <fa [name]="'user'" [size]=1></fa>
+          <strong>Brandon Bittner</strong>
+          <small>(3)</small>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <ul class="list-unstyled">
+            <li>
+              <a routerLink="/posts/4">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 4
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/5">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 5
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/6">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 6
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <fa [name]="'user'" [size]=1></fa>
+          <strong>Mallory Moore</strong>
+          <small>(3)</small>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <ul class="list-unstyled">
+            <li>
+              <a routerLink="/posts/7">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 7
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/8">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 8
+              </a>
+            </li>
+            <li>
+              <a routerLink="/posts/9">
+                <fa [name]="'newspaper-o'"></fa>
+                Post 9
+              </a>
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+  <div class="col-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<span *ngIf="metadata">
+  <h1>
+    <a href="{{metadata.url}}">Angular Blog Posts</a>
+    <small>({{metadata.posts.totalItems}})</small>
+  </h1>
+  <hr>
+</span>
+
+<section class="row" *ngFor="let post of posts; let i = index;">
+  <div class="col col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <small class="pull-left">Posted - {{ post.published | date:'shortDate' }}</small>
+        <small class="pull-right">{{post.author.displayName}}</small>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{post.title}}</h4>
+        <p class="card-text" [innerHTML]=post.content></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<span *ngIf="postLoadError; else loadMoreBlock">
+  <div class="alert alert-warning" role="alert">
+    <strong>{{postLoadError.code}} -</strong> {{postLoadError.message}}
+  </div>
+</span>
+<ng-template #loadMoreBlock>
+  <button class="btn btn-block btn-outline-primary" [disabled]="loadingPosts" (click)="loadMorePosts()">More Posts</button>
+</ng-template>

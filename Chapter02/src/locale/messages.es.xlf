@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3e2ccc5737a76c65150a7cd6f3697bf0cf9b7015" datatype="html">
+        <source>Posts</source>
+        <target>Entradas</target>
+      </trans-unit>
+      <trans-unit id="0cdd51e152e616c0bb63333fcb36dd00b99c939c" datatype="html">
+        <source>
+          <x id="ICU"/>
+        </source>
+        <target>
+          {authorCount, plural, =1 {Autor} other {Autores}}
+        </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,39 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# npm
+node_modules
+*.log
+*.gz
+uploads
+sock
+dist
+
+# Coveralls
+coverage
+
+# Benchmarking
+benchmarks/graphs
+
+# Forever
+config.json
+pids
+.pid
+
+# Security
+key.pem
+cert.pem
+
+# IDE
+.idea

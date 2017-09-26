@@ -1,0 +1,24 @@
+@import "~font-awesome/scss/variables";
+@import "~font-awesome/scss/mixins";
+
+@font-face {
+  font-family: "{{fontName}}";
+  src: {{{src}}};
+}
+
+@import "~font-awesome/scss/core";
+@import "~font-awesome/scss/larger";
+@import "~font-awesome/scss/fixed-width";
+@import "~font-awesome/scss/list";
+@import "~font-awesome/scss/bordered-pulled";
+@import "~font-awesome/scss/animated";
+@import "~font-awesome/scss/rotated-flipped";
+@import "~font-awesome/scss/stacked";
+@import "~font-awesome/scss/screen-reader";
+
+{{#each codepoints}}
+  .#{$fa-css-prefix}-{{@key}}:before {
+    font-family: {{../fontName}};
+    content: unquote("\"\\{{this}}\"");
+  }
+{{/each}}

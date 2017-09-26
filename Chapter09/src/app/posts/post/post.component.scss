@@ -1,0 +1,14 @@
+
+.cover {
+  background-image: url('../../../assets/images/dots.png?max-width=1200&max-height=600');
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 200px;
+}
+
+@media screen and (max-width: 991px) {
+  .cover {
+    background-image: url('../../../assets/images/dots.png?max-width=720');
+    min-height: 100px;
+  }
+}
